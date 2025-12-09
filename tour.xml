@@ -1,0 +1,1654 @@
+﻿<krpano version="1.23" title="Virtual Tour">
+
+	<!-- MÚSICA DE FUNDO -->
+	<sound name="background_music" 
+	       url="music/bg_music.mp3" 
+	       loops="true" 
+	       volume="20.3" 
+	       autoplay="true" />
+
+	<include url="skin/vtourskin.xml" />
+
+	
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="openstreetmaps"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	 <scene name="scene_eurolab_terreo" title="eurolab_terreo" onstart="" thumburl="panos/eurolab_terreo.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	    
+		<layer name="vr_ui_container" keep="true" type="container" align="center" width="100%" height="100%" zorder="10" />
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/eurolab_terreo.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/eurolab_terreo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857235201" style="skin_hotspotstyle" ath="12.712" atv="2.683" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_jardim_terreo" linkedscene_lookat="8.3,2.26,120.0" />
+		<hotspot name="label_jardim_terreo"
+         url="labels/ref_eurolab.png"
+         distorted="true"
+         ath="0"         
+         atv="0"          
+         ox="110"
+         oy="10"             
+         oz="20"             
+         rx="20"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+		<hotspot name="label_jardim_terreo_2"
+         url="labels/painel_01.png"
+         distorted="true"
+         ath="-20"         
+         atv="-10"          
+         ox="00"
+         oy="-230"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+		<hotspot name="label_jardim_terreo_3"
+         url="labels/painel_jardim_2.png"
+         distorted="true"
+         ath="160"         
+         atv="0"          
+         ox="0"
+         oy="-130"             
+         oz="110"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+		 
+
+	 </scene>
+
+	<scene name="scene_jardim_terreo" title="jardim_terreo" onstart="" thumburl="panos/jardim_terreo.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/jardim_terreo.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/jardim_terreo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857235813" style="skin_hotspotstyle" ath="-41.166" atv="13.693" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_recepcao_terreo" linkedscene_lookat="146.77,14.9,118.64" />
+	     <hotspot name="label_jardim_terreo_1"
+         url="labels/ref_recepcao.png"
+         distorted="true"
+         ath="-41.0"         
+         atv="0.0"          
+         ox="0"
+         oy="100"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857237525" style="skin_hotspotstyle" ath="-135.378" atv="13.238" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_eurolab_terreo" linkedscene_lookat="-205.23,0.91,119.9" />
+	    <hotspot name="label_jardim_terreo_2"
+         url="labels/ref_jardim.png"
+         distorted="true"
+         ath="-135.0"         
+         atv="0.0"          
+         ox="0"
+         oy="90"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+		 
+		<hotspot name="spot1857238732" style="skin_hotspotstyle" ath="-70.374" atv="3.274" depth="1000.0" linkedscene="scene_hall_1andar" linkedscene_lookat="98.18,-13.13,120.0" />
+        <hotspot name="label_jardim_terreo_3"
+         url="labels/ref_hall_1andar.png"
+         distorted="true"
+         ath="-71.0"         
+         atv="0.0"          
+         ox="0"
+         oy="0"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+	</scene>
+
+	<scene name="scene_recepcao_terreo" title="recepcao_terreo" onstart="" thumburl="panos/recepcao_terreo.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/recepcao_terreo.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/recepcao_terreo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857236393" style="skin_hotspotstyle" ath="34.677" atv="7.345" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_restaurante_terreo" linkedscene_lookat="191.08,-6.41,120.0" />
+		<hotspot name="label_recepcao_terreo_1"
+         url="labels/ref_restaurante.png"
+         distorted="true"
+         ath="35.0"         
+         atv="0.0"          
+         ox="0"
+         oy="50"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857237114" style="skin_hotspotstyle" ath="-65.059" atv="7.469" depth="1000.0" rotate="270" linkedscene="scene_jardim_terreo" linkedscene_lookat="-186.21,-6.42,120.0" />
+		<hotspot name="label_recepcao_terreo_2"
+         url="labels/ref_hall_terreo.png"
+         distorted="true"
+         ath="298.0"         
+         atv="0.0"          
+         ox="0"
+         oy="0"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857237965" style="skin_hotspotstyle" ath="147.406" atv="13.696" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_almoxarifado_terreo" linkedscene_lookat="-94.26,4.36,120.0" />
+		<hotspot name="label_recepcao_terreo_3"
+         url="labels/ref_almoxarifado.png"
+         distorted="true"
+         ath="142.0"         
+         atv="0.0"          
+         ox="0"
+         oy="110"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1868370607" style="skin_hotspotstyle" ath="162.021" atv="13.547" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_hall_1andar" linkedscene_lookat="-55.0,8.44,120.08" />
+		<hotspot name="label_recepcao_terreo_4"
+         url="labels/ref_hall_1andar.png"
+         distorted="true"
+         ath="164.0"         
+         atv="0.0"          
+         ox="0"
+         oy="90"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="label_jardim_terreo_2"
+         url="labels/painel_02.png"
+         distorted="true"
+         ath="-30"         
+         atv="-10"          
+         ox="-90"
+         oy="-50"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_restaurante_terreo" title="restaurante_terreo" onstart="" thumburl="panos/restaurante_terreo.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/restaurante_terreo.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/restaurante_terreo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857236725" style="skin_hotspotstyle" ath="13.907" atv="13.736" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_recepcao_terreo" linkedscene_lookat="-112.14,-5.72,120.0" />
+		 <hotspot name="label_restaurante_1"
+         url="labels/ref_recepcao.png"
+         distorted="true"
+         ath="14.0"         
+         atv="0.0"          
+         ox="0"
+         oy="100"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+	</scene>
+
+	<scene name="scene_almoxarifado_terreo" title="almoxarifado_terreo" onstart="" thumburl="panos/almoxarifado_terreo.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/almoxarifado_terreo.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/almoxarifado_terreo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857238192" style="skin_hotspotstyle" ath="74.938" atv="4.87" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_recepcao_terreo" linkedscene_lookat="-25.86,-1.74,120.02" />
+        <hotspot name="label_almoxarifado_terreo_1"
+         url="labels/ref_recepcao.png"
+         distorted="true"
+         ath="75.0"         
+         atv="0.0"          
+         ox="0"
+         oy="30"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+	</scene>
+
+	<scene name="scene_hall_1andar" title="hall_1andar" onstart="" thumburl="panos/hall_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/hall_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/hall_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857239635" style="skin_hotspotstyle" ath="-39.896" atv="15.341" depth="1000.0" rotate="180" linkedscene="scene_jardim_terreo" linkedscene_lookat="118.43,-1.32,120.0" />
+	     <hotspot name="label_hall_1andar"
+         url="labels/ref_hall_terreo.png"
+         distorted="true"
+         ath="310.0"         
+         atv="0.0"          
+         ox="0"
+         oy="107"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857240015" style="skin_hotspotstyle" ath="-16.572" atv="4.463" depth="1000.0" linkedscene="scene_hall_2andar" linkedscene_lookat="-122.52,-1.54,120.0" />
+		 <hotspot name="label_hall_1andar_2"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="357.0"         
+         atv="0.0"          
+         ox="0"
+         oy="70"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857256701" style="skin_hotspotstyle" ath="22.855" atv="4.77" depth="1000.0" rotate="90" linkedscene="scene_minifabrica_corredor_1andar" linkedscene_lookat="-303.73,11.46,120.0" />
+		 <hotspot name="label_hall_1andar_3"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="380.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-8"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+	</scene>
+
+	<scene name="scene_minifabrica_corredor_1andar" title="minifabrica_corredor_1andar" onstart="" thumburl="panos/minifabrica_corredor_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/minifabrica_corredor_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/minifabrica_corredor_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857292526" style="skin_hotspotstyle" ath="-131.23" atv="4.538" depth="1000.0" rotate="0" rx="50" ry="0" rz="0"  scale="1.0" linkedscene="scene_hall_1andar" linkedscene_lookat="-134.8,-4.74,120.0" />
+		 <hotspot name="label_minifabrica_corredor_1"
+         url="labels/ref_hall_1andar.png"
+         distorted="true"
+         ath="-131.0"         
+         atv="0.0"          
+         ox="0"
+         oy="10"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+		
+		<hotspot name="spot1857292944" style="skin_hotspotstyle" ath="45.945" atv="3.988" depth="1000.0" rotate="270" linkedscene="scene_emblistagem_1andar" linkedscene_lookat="-733.05,11.59,120.0" />
+		 <hotspot name="label_minifabrica_corredor_2"
+         url="labels/ref_emblistagem_1.png"
+         distorted="true"
+         ath="-327.0"         
+         atv="0.0"          
+         ox="0"
+         oy="33"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.35"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857293425" style="skin_hotspotstyle" ath="-40.17" atv="3.823" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" linkedscene="scene_minifabrica_1andar" linkedscene_lookat="-848.81,-1.52,120.0" />
+        <hotspot name="label_minifabrica_corredor_3"
+         url="labels/ref_minifabrica_corredor_1.png"
+         distorted="true"
+         ath="-40.0"         
+         atv="0.0"          
+         ox="0"
+         oy="0"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.35"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+		
+		<hotspot name="spot1857294617" style="skin_hotspotstyle" ath="-106.183" atv="14.781" depth="1000.0" rotate="90"  linkedscene="scene_sala_de_granulacao_umida_1andar" linkedscene_lookat="-434.16,-9.22,120.0" />
+		<hotspot name="label_minifabrica_corredor_4"
+         url="labels/ref_sala_de_compressao_1.png"
+         distorted="true"
+         ath="252.0"         
+         atv="0.0"          
+         ox="0"
+         oy="50"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857299081" style="skin_hotspotstyle" ath="-118.255" atv="6.308" depth="1000.0" rotate="90" linkedscene="scene_sala_de_compressao_1andar" linkedscene_lookat="-45.98,15.62,120.0" />
+		<hotspot name="label_minifabrica_corredor_5"
+         url="labels/ref_sala_de_granulacao_umida_1.png"
+         distorted="true"
+         ath="269.0"         
+         atv="0.0"          
+         ox="0"
+         oy="140"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.35"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+	</scene>
+
+	<scene name="scene_sala_de_compressao_1andar" title="sala_de_compressao_1andar" onstart="" thumburl="panos/sala_de_compressao_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/sala_de_compressao_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/sala_de_compressao_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857299357" style="skin_hotspotstyle" ath="-169.104" atv="17.164" depth="1000.0" rotate="270" linkedscene="scene_minifabrica_corredor_1andar" linkedscene_lookat="92.44,-8.76,120.0" />
+		<hotspot name="label_sala_de_compressao_1"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="194.0"         
+         atv="0.0"          
+         ox="0"
+         oy="100"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_16.png"
+         distorted="true"
+         ath="330.0"         
+         atv="0.0"          
+         ox="190"
+         oy="-110"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_sala_de_granulacao_umida_1andar" title="sala_de_granulacao umida_1andar" onstart="" thumburl="panos/sala_de_granulacao_umida_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/sala_de_granulacao_umida_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/sala_de_granulacao_umida_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857295267" style="skin_hotspotstyle" ath="40.219" atv="10.098" depth="1000.0" rotate="90" linkedscene="scene_minifabrica_corredor_1andar" linkedscene_lookat="109.28,8.02,120.0" />
+		<hotspot name="label_sala_de_granulacao_umida_1"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="37.0"         
+         atv="0.0"          
+         ox="0"
+         oy="40"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.35"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+        <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_13.png"
+         distorted="true"
+         ath="320.0"         
+         atv="0.0"          
+         ox="-00"
+         oy="-180"             
+         oz="110"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+		
+
+	</scene>
+
+	<scene name="scene_emblistagem_1andar" title="emblistagem_1andar" onstart="" thumburl="panos/emblistagem_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/emblistagem_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/emblistagem_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857293165" style="skin_hotspotstyle" ath="-160.051" atv="8.698" depth="1000.0" rotate="270"  linkedscene="scene_minifabrica_corredor_1andar" linkedscene_lookat="92.44,-8.76,120.0" />
+		<hotspot name="label_emblistagem_1"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="203.0"         
+         atv="0.0"          
+         ox="0"
+         oy="30"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_14.png"
+         distorted="true"
+         ath="340.0"         
+         atv="0.0"          
+         ox="-100"
+         oy="-170"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />		
+
+	</scene>
+
+	<scene name="scene_encapsuladora_1andar" title="encapsuladora_1andar" onstart="" thumburl="panos/encapsuladora_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/encapsuladora_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/encapsuladora_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857304850" style="skin_hotspotstyle" ath="50.178" atv="27.276" depth="1000.0" linkedscene="scene_minifabrica_1andar" rotate="0" rx="50" ry="0" rz="0" scale="1.0" linkedscene_lookat="-244.15,10.89,120.0" />
+		<hotspot name="label_encapsuladora_1"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="50.0"         
+         atv="0.0"          
+         ox="0"
+         oy="240"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_15.png"
+         distorted="true"
+         ath="230.0"         
+         atv="0.0"          
+         ox="-00"
+         oy="-130"             
+         oz="110"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_laboratorio_equivalencia_1andar" title="laboratorio_equivalencia_1andar" onstart="" thumburl="panos/laboratorio_equivalencia_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/laboratorio_equivalencia_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/laboratorio_equivalencia_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857301295" style="skin_hotspotstyle" ath="-3.176" atv="20.075" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.0" linkedscene="scene_minifabrica_1andar" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="label_laboratorio_1"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="356.0"         
+         atv="0.0"          
+         ox="0"
+         oy="160"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_jardim_terreo_3"
+         url="labels/painel_03.png"
+         distorted="true"
+         ath="172"         
+         atv="0"          
+         ox="0"
+         oy="-150"             
+         oz="110"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_minifabrica_1andar" title="minifabrica_1andar" onstart="" thumburl="panos/minifabrica_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/minifabrica_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/minifabrica_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857266981" style="skin_hotspotstyle" ath="137.565" atv="8.305" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_hall_1andar" linkedscene_lookat="-134.3,3.91,120.0" />
+		<hotspot name="label_minifabrica_1"
+         url="labels/ref_hall_1andar.png"
+         distorted="true"
+         ath="138.0"         
+         atv="0.0"          
+         ox="0"
+         oy="50"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857293912" style="skin_hotspotstyle" ath="45.908" atv="6.456" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" linkedscene="scene_minifabrica_corredor_1andar"  linkedscene_lookat="-220.44,6.0,120.0" />
+		<hotspot name="label_minifabrica_2"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="46.0"         
+         atv="0.0"          
+         ox="0"
+         oy="30"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857302158" style="skin_hotspotstyle" ath="-56.733" atv="3.703" depth="1000.0" rotate="270" linkedscene="scene_encapsuladora_1andar" linkedscene_lookat="-137.37,4.05,120.0" />
+		<hotspot name="label_minifabrica_4"
+         url="labels/ref_encapsuladora_1.png"
+         distorted="true"
+         ath="297.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-10"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857305908" style="skin_hotspotstyle" ath="-35.763" atv="4.003" depth="1000.0" rotate="90" linkedscene="scene_revestimento_1andar" linkedscene_lookat="-134.18,8.38,120.0" />
+		<hotspot name="label_minifabrica_5"
+         url="labels/ref_revestimento_1.png"
+         distorted="true"
+         ath="328.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-10"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1868386318" style="skin_hotspotstyle" ath="129.924" atv="-2.031" depth="1000.0" rotate="270" linkedscene="scene_laboratorio_equivalencia_1andar" linkedscene_lookat="-192.51,4.99,120.0" />
+        <hotspot name="label_minifabrica_3"
+         url="labels/ref_laboratorio_1.png"
+         distorted="true"
+         ath="120.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-20"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+        <hotspot name="label_jardim_terreo_3"
+         url="labels/painel_04.png"
+         distorted="true"
+         ath="230.0"         
+         atv="0.0"          
+         ox="-280"
+         oy="-110"             
+         oz="110"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_revestimento_1andar" title="revestimento_1andar" onstart="" thumburl="panos/revestimento_1andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/revestimento_1andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/revestimento_1andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857306337" style="skin_hotspotstyle" ath="109.568" atv="7.17" depth="1000.0" rotate="270" linkedscene="scene_minifabrica_1andar" linkedscene_lookat="128.32,-2.91,120.0" />
+        <hotspot name="label_revestimento_1"
+         url="labels/ref_minifabrica_1.png"
+         distorted="true"
+         ath="113.0"         
+         atv="0.0"          
+         ox="0"
+         oy="20"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_17.png"
+         distorted="true"
+         ath="212.0"         
+         atv="0.0"          
+         ox="-200"
+         oy="-150"             
+         oz="110"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_liofilizacao_2andar" title="liofilizacao_2andar" onstart="" thumburl="panos/liofilizacao_2andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/liofilizacao_2andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/liofilizacao_2andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857319898" style="skin_hotspotstyle" ath="-42.101" atv="31.468" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.0" linkedscene="scene_hall_2andar" linkedscene_lookat="8.88,-6.02,120.0" />
+		 <hotspot name="label_liofilizacao_1"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="318.0"         
+         atv="0.0"          
+         ox="0"
+         oy="270"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_22.png"
+         distorted="true"
+         ath="135.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-88"             
+         oz="120"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_pre_formulacao_2andar" title="pre_formulacao_2andar" onstart="" thumburl="panos/pre_formulacao_2andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/pre_formulacao_2andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/pre_formulacao_2andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857311785" style="skin_hotspotstyle" ath="131.157" atv="5.828" depth="1000.0" rotate="270" linkedscene="scene_hall_2andar" linkedscene_lookat="8.88,-6.02,120.0" />
+		<hotspot name="label_pre_formulacao_1"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="134.0"         
+         atv="0.0"          
+         ox="0"
+         oy="0"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.2"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+          <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_25.png"
+         distorted="true"
+         ath="265.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-110"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_sala_de_liquidos_2andar" title="sala_de_liquidos_2andar" onstart="" thumburl="panos/sala_de_liquidos_2andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/sala_de_liquidos_2andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/sala_de_liquidos_2andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857319287" style="skin_hotspotstyle" ath="-47.915" atv="25.63" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.0" linkedscene="scene_hall_2andar" linkedscene_lookat="0.0,0.0,120.0" />
+		<hotspot name="label_pre_formulacao_1"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="312.0"         
+         atv="0.0"          
+         ox="0"
+         oy="200"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_21.png"
+         distorted="true"
+         ath="135.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-88"             
+         oz="120"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_compressao_2andar" title="compressao_2andar" onstart="" thumburl="panos/compressao_2andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/compressao_2andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/compressao_2andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857318772" style="skin_hotspotstyle" ath="50.048" atv="24.425" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.0" linkedscene="scene_hall_2andar" linkedscene_lookat="-22.85,-12.06,120.0" />
+		<hotspot name="label_pre_formulacao_1"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="50.0"         
+         atv="0.0"          
+         ox="0"
+         oy="200"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_23.png"
+         distorted="true"
+         ath="228.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-88"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_desenvolvimento_de_metodo_analitico_2andar" title="desenvolvimento_de_metodo_analitico_2andar" onstart="" thumburl="panos/desenvolvimento_de_metodo_analitico_2andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/desenvolvimento_de_metodo_analitico_2andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/desenvolvimento_de_metodo_analitico_2andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857311192" style="skin_hotspotstyle" ath="45.443" atv="9.447" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.0" linkedscene="scene_hall_2andar" linkedscene_lookat="-310.59,-0.06,120.0" />
+		<hotspot name="label_desenvolvimento_de_metodo_analitico_1"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="45.0"         
+         atv="0.0"          
+         ox="0"
+         oy="40"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+          <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_26.png"
+         distorted="true"
+         ath="228.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-140"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_farmacotecnico_2andar" title="farmacotecnico_2andar" onstart="" thumburl="panos/farmacotecnico_2andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/farmacotecnico_2andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/farmacotecnico_2andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857312493" style="skin_hotspotstyle" ath="-133.393" atv="4.816" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.0" linkedscene="scene_hall_2andar" linkedscene_lookat="0.0,0.0,120.0" />
+		<hotspot name="label_farmacotecnico_1"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="227.0"         
+         atv="0.0"          
+         ox="0"
+         oy="13"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+          <hotspot name="label_sala_de_granulacao_umida_2"
+         url="labels/painel_24.png"
+         distorted="true"
+         ath="48.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-120"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_hall_2andar" title="hall_2andar" onstart="" thumburl="panos/hall_2andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/hall_2andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/hall_2andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857240498" style="skin_hotspotstyle" ath="44.356" atv="7.846" depth="1000.0" rotate="180" linkedscene="scene_hall_1andar" linkedscene_lookat="-148.37,-2.61,120.0" />
+        <hotspot name="label_hall_2andar_1"
+         url="labels/ref_hall_1andar.png"
+         distorted="true"
+         ath="44.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-10"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.25"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857241140" style="skin_hotspotstyle" ath="57.011" atv="1.258" depth="1000.0" linkedscene="scene_hall_3andar" linkedscene_lookat="306.47,-0.36,120.0" />
+		<hotspot name="label_hall_2andar_2"
+         url="labels/ref_hall_3andar.png"
+         distorted="true"
+         ath="57.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-10"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.25"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857310511" style="skin_hotspotstyle" ath="-126.818" atv="-5.727" depth="1000.0" rotate="270" linkedscene="scene_desenvolvimento_de_metodo_analitico_2andar" linkedscene_lookat="225.17,1.61,137.23" />
+		<hotspot name="label_hall_2andar_3"
+         url="labels/ref_desenvolvimento_de_metodo_analitico_2.png"
+         distorted="true"
+         ath="255.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-34"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.35"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+
+		<hotspot name="spot1857311397" style="skin_hotspotstyle" ath="-126.537" atv="2.041" depth="1000.0" rotate="270" linkedscene="scene_pre_formulacao_2andar" linkedscene_lookat="-73.28,-3.35,120.0" />
+		<hotspot name="label_hall_2andar_4"
+         url="labels/ref_pre_formulacao_2.png"
+         distorted="true"
+         ath="256.0"         
+         atv="0.0"          
+         ox="0"
+         oy="18"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.35"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857312081" style="skin_hotspotstyle" ath="-126.666" atv="10.304" depth="1000.0" rotate="270" linkedscene="scene_farmacotecnico_2andar" linkedscene_lookat="43.62,8.66,120.0" />
+		<hotspot name="label_hall_2andar_5"
+         url="labels/ref_farmacotecnico_2.png"
+         distorted="true"
+         ath="256.0"         
+         atv="0.0"          
+         ox="0"
+         oy="95"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.35"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857318388" style="skin_hotspotstyle" ath="74.273" atv="-5.606" depth="1000.0" rotate="90" linkedscene="scene_compressao_2andar" linkedscene_lookat="-130.13,4.95,120.0" />
+		<hotspot name="label_hall_2andar_6"
+         url="labels/ref_compressao_2.png"
+         distorted="true"
+         ath="85.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-48"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857318994" style="skin_hotspotstyle" ath="74.579" atv="0.458" depth="1000.0" rotate="90" linkedscene="scene_sala_de_liquidos_2andar" linkedscene_lookat="133.57,-4.29,120.0" />
+		<hotspot name="label_hall_2andar_7"
+         url="labels/ref_sala_de_liquidos_2.png"
+         distorted="true"
+         ath="81.0"         
+         atv="0.0"          
+         ox="0"
+         oy="4"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.27"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857319427" style="skin_hotspotstyle" ath="74.746" atv="6.723" depth="1000.0" rotate="90" linkedscene="scene_liofilizacao_2andar" linkedscene_lookat="131.42,5.05,120.0" />
+		<hotspot name="label_hall_2andar_8"
+         url="labels/ref_liofilizacao_2.png"
+         distorted="true"
+         ath="84.0"         
+         atv="0.0"          
+         ox="0"
+         oy="60"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+	</scene>
+
+	<scene name="scene_analises_farmaceuticas_3andar" title="analises_farmaceuticas_3andar" onstart="" thumburl="panos/analises_farmaceuticas_3andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/analises_farmaceuticas_3andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/analises_farmaceuticas_3andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857253264" style="skin_hotspotstyle" ath="-153.544" atv="4.066" depth="1000.0" rotate="270" linkedscene="scene_hall_3andar" linkedscene_lookat="-236.86,0.41,120.0" />
+		<hotspot name="label_analises_farmaceuticas_1"
+         url="labels/ref_hall_3andar.png"
+         distorted="true"
+         ath="210.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-22"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+        
+        <hotspot name="label_analises_farmaceuticas_2"
+         url="labels/painel_31.png"
+         distorted="true"
+         ath="335.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-120"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_hall_3andar" title="hall_3andar" onstart="" thumburl="panos/hall_3andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/hall_3andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/hall_3andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857241960" style="skin_hotspotstyle" ath="86.019" atv="7.625" depth="1000.0" rotate="180" linkedscene="scene_hall_2andar" linkedscene_lookat="-117.04,4.61,120.0" />
+		<hotspot name="label_hall_3andar_1"
+         url="labels/ref_hall_2andar_2.png"
+         distorted="true"
+         ath="86.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-12"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.25"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857244862" style="skin_hotspotstyle" ath="98.979" atv="1.0" depth="1000.0" linkedscene="scene_hall_4andar" linkedscene_lookat="-3.32,-0.89,120.0" />
+		<hotspot name="label_hall_3andar_2"
+         url="labels/ref_hall_4andar.png"
+         distorted="true"
+         ath="99.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-12"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.25"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857248570" style="skin_hotspotstyle" ath="159.875" atv="9.503" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" linkedscene="scene_pesquisa_e_desenvolvimento_3andar" linkedscene_lookat="-527.2,2.35,119.53" />
+		<hotspot name="label_hall_3andar_3"
+         url="labels/ref_pesquisa_e_desenvolvimento_3.png"
+         distorted="true"
+         ath="161.0"         
+         atv="0.0"          
+         ox="0"
+         oy="55"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+		<hotspot name="spot1857251820" style="skin_hotspotstyle" ath="-42.629" atv="6.344" depth="1000.0" rotate="270" linkedscene="scene_laboratorio_de_radicais_3andar" linkedscene_lookat="-488.03,-1.0,120.0" />
+		<hotspot name="label_hall_3andar_4"
+         url="labels/ref_laboratorio_de_radicais_3.png"
+         distorted="true"
+         ath="335.0"         
+         atv="0.0"          
+         ox="0"
+         oy="58"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+         
+		<hotspot name="spot1857252626" style="skin_hotspotstyle" ath="-42.298" atv="-1.604" depth="1000.0" rotate="270" linkedscene="scene_analises_farmaceuticas_3andar" linkedscene_lookat="-37.8,-4.17,120.0" />
+		<hotspot name="label_hall_3andar_5"
+         url="labels/ref_analises_farmaceuticas_3.png"
+         distorted="true"
+         ath="338.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-15"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+		
+
+	</scene>
+
+	<scene name="scene_laboratorio_de_radicais_3andar" title="laboratorio_de_radicais_3andar" onstart="" thumburl="panos/laboratorio_de_radicais_3andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+			
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/laboratorio_de_radicais_3andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/laboratorio_de_radicais_3andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857252190" style="skin_hotspotstyle" ath="47.775" atv="1.303" depth="1000.0" rotate="90" linkedscene="scene_hall_3andar" linkedscene_lookat="-230.86,-6.67,120.0" />
+		<hotspot name="label_laboratorio_de_radicais_1"
+         url="labels/ref_hall_3andar.png"
+         distorted="true"
+         ath="45.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-45"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_laboratorio_de_radicais_2"
+         url="labels/painel_32.png"
+         distorted="true"
+         ath="260.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-120"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_pesquisa_e_desenvolvimento_3andar" title="pesquisa_e_desenvolvimento_3andar" onstart="" thumburl="panos/pesquisa_e_desenvolvimento_3andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/pesquisa_e_desenvolvimento_3andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/pesquisa_e_desenvolvimento_3andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857249261" style="skin_hotspotstyle" ath="-10.611" atv="5.04" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_hall_3andar" linkedscene_lookat="-310.59,-0.06,120.0" />
+		<hotspot name="label_analises_farmaceuticas_1"
+         url="labels/ref_hall_3andar.png"
+         distorted="true"
+         ath="350.0"         
+         atv="0.0"          
+         ox="0"
+         oy="10"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_analises_farmaceuticas_2"
+         url="labels/painel_33.png"
+         distorted="true"
+         ath="195.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-80"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+	</scene>
+
+	<scene name="scene_sala_brasil_4andar" title="sala_brasil_4andar" onstart="" thumburl="panos/sala_brasil_4andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/sala_brasil_4andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/sala_brasil_4andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857244335" style="skin_hotspotstyle" ath="164.368" atv="11.218" depth="1000.0" rotate="0" rx="50" ry="0" rz="0" scale="1.2" linkedscene="scene_hall_4andar" linkedscene_lookat="-20.39,-15.23,120.0" />
+		<hotspot name="label_sala_braasil_1"
+         url="labels/ref_hall_4andar.png"
+         distorted="true"
+         ath="165.0"         
+         atv="0.0"          
+         ox="0"
+         oy="60"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.4"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+         <hotspot name="label_analises_farmaceuticas_2"
+         url="labels/painel_41.png"
+         distorted="true"
+         ath="250.0"         
+         atv="0.0"          
+         ox="90"
+         oy="-130"             
+         oz="200"             
+         rx="0"              
+         rotate="0"           
+         scale="0.5"
+         visible="true"
+         enabled="false"
+         zorder="999"
+         />
+
+
+	</scene>
+
+	<scene name="scene_hall_4andar" title="hall_4andar" onstart="" thumburl="panos/hall_4andar.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/hall_4andar.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/hall_4andar.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
+		</image>
+
+		<hotspot name="spot1857241603" style="skin_hotspotstyle" ath="-174.313" atv="6.086" depth="1000.0" rotate="180" linkedscene="scene_hall_3andar" linkedscene_lookat="-60.26,-7.7,120.0" />
+		<hotspot name="label_hall4_1"
+         url="labels/ref_hall_3andar.png"
+         distorted="true"
+         ath="186.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-35"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+		
+		<hotspot name="spot1857243995" style="skin_hotspotstyle" ath="117.595" atv="-0.969" depth="1000.0" rotate="90" linkedscene="scene_sala_brasil_4andar" linkedscene_lookat="251.23,6.54,120.0" />
+		<hotspot name="label_hall4_2"
+         url="labels/ref_sala_brasil_4.png"
+         distorted="true"
+         ath="115.0"         
+         atv="0.0"          
+         ox="0"
+         oy="-50"             
+         oz="0"             
+         rx="0"              
+         rotate="0"           
+         scale="0.3"
+         visible="true"
+         enabled="false"
+         zorder="999"/>
+
+	</scene>
+
+
+</krpano>
