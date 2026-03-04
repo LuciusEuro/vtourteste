@@ -1,15 +1,89 @@
 ﻿<krpano version="1.23" title="Virtual Tour">
 
-	<!-- MÚSICA DE FUNDO -->
-	<sound name="background_music" 
-	       url="music/bg_music.mp3" 
-	       loops="true" 
-	       volume="20.3" 
-	       autoplay="true" />
+
 
 	<include url="skin/vtourskin.xml" />
 
-	
+	<plugin api="soundinterface"
+        url="%VIEWER%/plugins/soundinterface.js"
+        preload="true"
+        rootpath=""
+        volume="0.3"
+        mute="false"
+        panningmodel="simple"
+        worldscale="1.0"
+        autopause="true"
+        autounlock="true"
+        />
+
+		
+
+       <action name="start_sound" autorun="onstart">
+       playsound(bgsnd, 'audio/eurolab_ambient.mp3', 0);
+       </action>
+
+    <layer name="btn_mute"
+       keep="true"
+       url="skin/vtourskin_soundon.png"
+       align="rightbottom"
+       x="20" y="20"
+	   width="76"
+       height="53"
+       scale="0.5"
+       zorder="100"
+       onclick="pausesoundtoggle(bgsnd);
+                if(plugin[soundinterface].soundplaying(bgsnd),
+                   set(alpha, 1.0),
+                   set(alpha, 0.4)
+                );"
+    
+    />
+
+	<layer name="intro"
+	       type="container"
+		   keep="true"
+		   width="100%"
+		   height="100%"
+		   bgcolor="0xFFFFFF"
+		   bgalpha="0.8"
+		   zorder="9999"
+		   enabled="true"
+		   bgcapture="true"
+		   onclick=""
+	>
+
+
+    <layer name="video"
+       url="%VIEWER%/plugins/videoplayer.js"
+       videourl="video/meuvideo.mp4"
+       posterurl="videoposter.jpg"
+       align="center"
+       width="50%"
+       height="50%"
+       scale="1"
+       pausedonstart="false"
+       loop="false"
+       volume="0.0"
+       enabled="true"
+       zorder="1"
+	   vr_enabled="true"
+       vr_mode="stereo"
+	   onvideocomplete="tween(layer[intro].alpha, 0, 0.5, default, set(layer[intro].enabled, false));"
+       />
+
+ 
+	<layer name="logo"
+	       enabled="true"
+	       url="" align="center"/>
+
+	</layer>
+
+	  
+	<action name="on_intro_click">
+	      tween(layer[intro].alpha, 0);
+		  set(layer[intro].enabled, false);
+	</action> 
+
 
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
