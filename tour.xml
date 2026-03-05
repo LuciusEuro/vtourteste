@@ -53,13 +53,14 @@
 	>
 
 
-    <layer name="video"
+  <layer name="video"
        url="%VIEWER%/plugins/videoplayer.js"
        videourl="video/meuvideo.mp4"
        posterurl="videoposter.jpg"
        align="center"
-       width="50%"
-       height="50%"
+       width="960"
+       height="960"
+       keepaspect="true"
        scale="1"
        pausedonstart="false"
        loop="false"
@@ -68,6 +69,7 @@
        zorder="1"
 	   vr_enabled="true"
        vr_mode="stereo"
+       vr_resolution="960x960"
 	   onvideocomplete="tween(layer[intro].alpha, 0, 0.5, default, set(layer[intro].enabled, false));"
        />
 
